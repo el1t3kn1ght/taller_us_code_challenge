@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36109.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "real_time_task_management", "real_time_task_management.csproj", "{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E486281A-7719-4096-8DD4-B5077E5DED18}
+	EndGlobalSection
+EndGlobal
