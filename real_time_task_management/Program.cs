@@ -1,11 +1,15 @@
-﻿using Microsoft.AspNetCore.SignalR;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using real_time_task_management.Context;
 using real_time_task_management.Dtos;
 using real_time_task_management.Entities;
 using real_time_task_management.Hub;
+using real_time_task_management.Mappings;
+using real_time_task_management.Middleware;
+using real_time_task_management.Repositories;
 using real_time_task_management.SummarizationServices;
-using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,10 +17,22 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// SignalR
 builder.Services.AddSignalR();
 
+// AutoMapper
+builder.Services.AddAutoMapper(x =>
+{
+    x.AddProfile<TaskMappingProfile>();
+});
+
+// Repository Pattern
+builder.Services.AddScoped<ITaskRepository, TaskRepository>();
+
+// Services
 builder.Services.AddScoped<ISummarizationService, SummarizationService>();
 
+// Database
 builder.Services.AddDbContext<TaskDbContext>(options =>
     options.UseSqlite("Data Source=tasks.db"));
 
@@ -35,7 +51,7 @@ builder.Services.AddCors(options =>
             )
             .AllowAnyMethod()
             .AllowAnyHeader()
-            .AllowCredentials(); // Important for SignalR
+            .AllowCredentials();
     });
 });
 
@@ -48,87 +64,98 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// ⚠️ CRITICAL: Middleware order matters!
-// 1. CORS must be first
+
+// 1. Global Exception Handler (should be first)
+app.UseGlobalExceptionHandler();
+
+// 2. CORS
 app.UseCors("AllowAll");
 
-// 2. HTTPS redirection
+// 3. HTTPS redirection
 app.UseHttpsRedirection();
 
-// 3. Map SignalR hub AFTER CORS
+// 4. Map SignalR hub
 app.MapHub<TaskHub>("/taskHub");
 
 // API Endpoints
-app.MapGet("/api/tasks", async (TaskDbContext db) =>
+app.MapGet("/api/tasks", async (
+    ITaskRepository repository,
+    IMapper mapper) =>
 {
-    var tasks = await db.Tasks.OrderByDescending(t => t.CreatedAt).ToListAsync();
-    return Results.Ok(tasks);
+    var tasks = await repository.GetAllTasksAsync();
+    var tasksDto = mapper.Map<IEnumerable<TaskResponseDto>>(tasks);
+    return Results.Ok(tasksDto);
 })
 .WithName("GetAllTasks")
 .WithOpenApi();
 
-app.MapGet("/api/tasks/{id}", async (int id, TaskDbContext db) =>
+app.MapGet("/api/tasks/{id}", async (
+    int id,
+    ITaskRepository repository,
+    IMapper mapper) =>
 {
-    var task = await db.Tasks.FindAsync(id);
-    return task is not null ? Results.Ok(task) : Results.NotFound();
+    var task = await repository.GetTaskByIdAsync(id);
+
+    if (task is null)
+        return Results.NotFound(new { Message = $"Task with ID {id} not found." });
+
+    var taskDto = mapper.Map<TaskResponseDto>(task);
+    return Results.Ok(taskDto);
 })
 .WithName("GetTaskById")
 .WithOpenApi();
 
 app.MapPost("/api/tasks", async (
-    TaskItem task,
-    TaskDbContext db,
+    CreateTaskDto createTaskDto,
+    ITaskRepository repository,
+    IMapper mapper,
     IHubContext<TaskHub> hubContext) =>
 {
-    task.CreatedAt = DateTime.UtcNow; // Ensure CreatedAt is set
-    db.Tasks.Add(task);
-    await db.SaveChangesAsync();
+    var task = mapper.Map<TaskItem>(createTaskDto);
+    var createdTask = await repository.CreateTaskAsync(task);
 
-    Console.WriteLine($"📤 Broadcasting TaskAdded: {task.Id} - {task.Title}");
-    await hubContext.Clients.All.SendAsync("TaskAdded", task);
+    var taskDto = mapper.Map<TaskResponseDto>(createdTask);
 
-    return Results.Created($"/api/tasks/{task.Id}", task);
+    Console.WriteLine($"📤 Broadcasting TaskAdded: {createdTask.Id} - {createdTask.Title}");
+    await hubContext.Clients.All.SendAsync("TaskAdded", taskDto);
+
+    return Results.Created($"/api/tasks/{createdTask.Id}", taskDto);
 })
 .WithName("CreateTask")
 .WithOpenApi();
 
 app.MapPut("/api/tasks/{id}", async (
     int id,
-    TaskItem updatedTask,
-    TaskDbContext db,
+    UpdateTaskDto updateTaskDto,
+    ITaskRepository repository,
+    IMapper mapper,
     IHubContext<TaskHub> hubContext) =>
 {
-    var task = await db.Tasks.FindAsync(id);
+    var taskToUpdate = mapper.Map<TaskItem>(updateTaskDto);
+    var updatedTask = await repository.UpdateTaskAsync(id, taskToUpdate);
 
-    if (task is null)
-        return Results.NotFound();
+    if (updatedTask is null)
+        return Results.NotFound(new { Message = $"Task with ID {id} not found." });
 
-    task.Title = updatedTask.Title;
-    task.Description = updatedTask.Description;
-    task.IsCompleted = updatedTask.IsCompleted;
+    var taskDto = mapper.Map<TaskResponseDto>(updatedTask);
 
-    await db.SaveChangesAsync();
+    Console.WriteLine($"📤 Broadcasting TaskUpdated: {updatedTask.Id} - {updatedTask.Title}");
+    await hubContext.Clients.All.SendAsync("TaskUpdated", taskDto);
 
-    Console.WriteLine($"📤 Broadcasting TaskUpdated: {task.Id} - {task.Title}");
-    await hubContext.Clients.All.SendAsync("TaskUpdated", task);
-
-    return Results.Ok(task);
+    return Results.Ok(taskDto);
 })
 .WithName("UpdateTask")
 .WithOpenApi();
 
 app.MapDelete("/api/tasks/{id}", async (
     int id,
-    TaskDbContext db,
+    ITaskRepository repository,
     IHubContext<TaskHub> hubContext) =>
 {
-    var task = await db.Tasks.FindAsync(id);
+    var deleted = await repository.DeleteTaskAsync(id);
 
-    if (task is null)
-        return Results.NotFound();
-
-    db.Tasks.Remove(task);
-    await db.SaveChangesAsync();
+    if (!deleted)
+        return Results.NotFound(new { Message = $"Task with ID {id} not found." });
 
     Console.WriteLine($"📤 Broadcasting TaskDeleted: {id}");
     await hubContext.Clients.All.SendAsync("TaskDeleted", id);
@@ -139,22 +166,23 @@ app.MapDelete("/api/tasks/{id}", async (
 .WithOpenApi();
 
 app.MapPost("/api/tasks/summary", async (
-    TaskDbContext db,
-    ISummarizationService aiService) =>
+    ITaskRepository repository,
+    ISummarizationService aiService,
+    IMapper mapper) =>
 {
-    var tasks = await db.Tasks.ToListAsync();
-
-    var aiSummary = await aiService.SummarizeTasksAsync(tasks);
+    var tasks = await repository.GetAllTasksAsync();
+    var aiSummary = await aiService.SummarizeTasksAsync([.. tasks]);
 
     var summary = new TaskSummary
     {
-        TotalTasks = tasks.Count,
-        CompletedTasks = tasks.Count(t => t.IsCompleted),
-        PendingTasks = tasks.Count(t => !t.IsCompleted),
+        TotalTasks = await repository.GetTotalTasksCountAsync(),
+        CompletedTasks = await repository.GetCompletedTasksCountAsync(),
+        PendingTasks = await repository.GetPendingTasksCountAsync(),
         AiSummary = aiSummary
     };
 
-    return Results.Ok(summary);
+    var summaryDto = mapper.Map<TaskSummaryDto>(summary);
+    return Results.Ok(summaryDto);
 })
 .WithName("GetTaskSummary")
 .WithOpenApi();

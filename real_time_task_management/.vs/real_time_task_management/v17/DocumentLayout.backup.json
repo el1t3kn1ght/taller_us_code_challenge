@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}|real_time_task_management.csproj|c:\\users\\pedro\\onedrive\\\u00E1rea de trabalho\\real_time_task_management\\summarizationservices\\summarizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}|real_time_task_management.csproj|solutionrelative:summarizationservices\\summarizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}|real_time_task_management.csproj|c:\\users\\pedro\\onedrive\\\u00E1rea de trabalho\\real_time_task_management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}|real_time_task_management.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +38,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "SummarizationService.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\SummarizationServices\\SummarizationService.cs",
+              "RelativeDocumentMoniker": "SummarizationServices\\SummarizationService.cs",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\SummarizationServices\\SummarizationService.cs",
+              "RelativeToolTip": "SummarizationServices\\SummarizationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-24T19:54:18.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "TaskHub.cs",
               "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\Hub\\TaskHub.cs",
               "RelativeDocumentMoniker": "Hub\\TaskHub.cs",
@@ -42,17 +59,18 @@
               "RelativeToolTip": "Hub\\TaskHub.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAowCcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T19:36:12.6Z"
+              "WhenOpened": "2025-10-24T19:36:12.6Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAKAAAAAAAAAAAAAgwKYAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAgwKYAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-24T19:25:59.927Z",
               "EditorCaption": ""

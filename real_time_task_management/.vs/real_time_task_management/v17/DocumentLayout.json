@@ -3,12 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}|real_time_task_management.csproj|c:\\users\\pedro\\onedrive\\\u00E1rea de trabalho\\real_time_task_management\\summarizationservices\\summarizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}|real_time_task_management.csproj|solutionrelative:summarizationservices\\summarizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}|real_time_task_management.csproj|c:\\users\\pedro\\onedrive\\\u00E1rea de trabalho\\real_time_task_management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}|real_time_task_management.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}|real_time_task_management.csproj|c:\\users\\pedro\\onedrive\\\u00E1rea de trabalho\\real_time_task_management\\middleware\\globalexceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}|real_time_task_management.csproj|solutionrelative:middleware\\globalexceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}|real_time_task_management.csproj|c:\\users\\pedro\\onedrive\\\u00E1rea de trabalho\\real_time_task_management\\mappings\\taskmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}|real_time_task_management.csproj|solutionrelative:mappings\\taskmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}|real_time_task_management.csproj|c:\\users\\pedro\\onedrive\\\u00E1rea de trabalho\\real_time_task_management\\dtos\\createtaskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}|real_time_task_management.csproj|solutionrelative:dtos\\createtaskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}|real_time_task_management.csproj|c:\\users\\pedro\\onedrive\\\u00E1rea de trabalho\\real_time_task_management\\repositories\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}|real_time_task_management.csproj|solutionrelative:repositories\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}|real_time_task_management.csproj|c:\\users\\pedro\\onedrive\\\u00E1rea de trabalho\\real_time_task_management\\repositories\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}|real_time_task_management.csproj|solutionrelative:repositories\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}|real_time_task_management.csproj|c:\\users\\pedro\\onedrive\\\u00E1rea de trabalho\\real_time_task_management\\summarizationservices\\isummarizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}|real_time_task_management.csproj|solutionrelative:summarizationservices\\isummarizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}|real_time_task_management.csproj|c:\\users\\pedro\\onedrive\\\u00E1rea de trabalho\\real_time_task_management\\dtos\\tasksummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}|real_time_task_management.csproj|solutionrelative:dtos\\tasksummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}|real_time_task_management.csproj|c:\\users\\pedro\\onedrive\\\u00E1rea de trabalho\\real_time_task_management\\summarizationservices\\summarizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}|real_time_task_management.csproj|solutionrelative:summarizationservices\\summarizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9BFE1942-CC0E-44B6-B0B1-3E6D288FB789}|real_time_task_management.csproj|c:\\users\\pedro\\onedrive\\\u00E1rea de trabalho\\real_time_task_management\\hub\\taskhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +66,111 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GlobalExceptionHandlerMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\Middleware\\GlobalExceptionHandlerMiddleware.cs",
+              "RelativeDocumentMoniker": "Middleware\\GlobalExceptionHandlerMiddleware.cs",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\Middleware\\GlobalExceptionHandlerMiddleware.cs",
+              "RelativeToolTip": "Middleware\\GlobalExceptionHandlerMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T01:07:32.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TaskMappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\Mappings\\TaskMappingProfile.cs",
+              "RelativeDocumentMoniker": "Mappings\\TaskMappingProfile.cs",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\Mappings\\TaskMappingProfile.cs",
+              "RelativeToolTip": "Mappings\\TaskMappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T01:06:49.484Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CreateTaskDto.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\Dtos\\CreateTaskDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\CreateTaskDto.cs",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\Dtos\\CreateTaskDto.cs",
+              "RelativeToolTip": "Dtos\\CreateTaskDto.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T00:50:27.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TaskRepository.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\Repositories\\TaskRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\TaskRepository.cs",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\Repositories\\TaskRepository.cs",
+              "RelativeToolTip": "Repositories\\TaskRepository.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAqwEwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T00:50:02.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAAAKUAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-24T19:25:59.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ITaskRepository.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\Repositories\\ITaskRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ITaskRepository.cs",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\Repositories\\ITaskRepository.cs",
+              "RelativeToolTip": "Repositories\\ITaskRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T00:49:09.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ISummarizationService.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\SummarizationServices\\ISummarizationService.cs",
+              "RelativeDocumentMoniker": "SummarizationServices\\ISummarizationService.cs",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\SummarizationServices\\ISummarizationService.cs",
+              "RelativeToolTip": "SummarizationServices\\ISummarizationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T00:40:09.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TaskSummary.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\Dtos\\TaskSummary.cs",
+              "RelativeDocumentMoniker": "Dtos\\TaskSummary.cs",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\Dtos\\TaskSummary.cs",
+              "RelativeToolTip": "Dtos\\TaskSummary.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T00:29:33.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "SummarizationService.cs",
               "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\SummarizationServices\\SummarizationService.cs",
               "RelativeDocumentMoniker": "SummarizationServices\\SummarizationService.cs",
@@ -51,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "TaskHub.cs",
               "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\Hub\\TaskHub.cs",
               "RelativeDocumentMoniker": "Hub\\TaskHub.cs",
@@ -60,19 +192,6 @@
               "ViewState": "AgIAAAwAAAAAAAAAAAAowCcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-24T19:36:12.6Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\pedro\\OneDrive\\\u00C1rea de Trabalho\\real_time_task_management\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAgwKYAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T19:25:59.927Z",
               "EditorCaption": ""
             }
           ]
